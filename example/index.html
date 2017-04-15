@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React TDD</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <style type="text/css">
+    .phone {
+      border: 1px solid #bfbfbf;
+      border-radius: 1.3em;
+      height: 620px;
+      width: 380px;
+      margin: 30px auto;
+    }
+  </style>
+</head>
+<body>
+  
+<div class="container-fluid">
+  <div id="app"></div>
+</div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.0/react.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.0/react-dom.js"></script>
+<script type="text/javascript" src="./dist/application.js"></script>
+
+<script type="text/javascript">
+  var state = {};
+
+  function doRender() {
+    var container = document.getElementById("app"),
+      element = React.createElement(window.App, state);
+
+    ReactDOM.render(element, container);
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    doRender();
+  });
+</script>
+</body>
+</html>
